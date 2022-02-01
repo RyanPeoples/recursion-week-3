@@ -12,7 +12,18 @@ reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
 
-// your code here
+let reverse = string => {
+  if(string==="") return string;
+  let arr = [];
+  let letters = string.split("");
+  if(letters.length>1){
+    arr.push(letters.pop());
+    return arr + reverse(letters.join(""));
+  } else {
+    arr.push(letters.pop());
+    return arr.join("")
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
