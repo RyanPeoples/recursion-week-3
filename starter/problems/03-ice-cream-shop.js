@@ -13,8 +13,14 @@ iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
 
 
-// your code here
-
+let iceCreamShop = (flavors, favorite)=>{
+  if(flavors[0]===favorite){
+    return true;
+  } else if(flavors.length){
+    flavors.splice(0,1);
+    return iceCreamShop(flavors, favorite);
+  } else return false
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
