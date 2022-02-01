@@ -11,8 +11,16 @@ range(7, 6); // []
 ***********************************************************************/
 
 
-// your code here
-
+let range = (start, end) => {
+  if(start>end) return [];
+  let arr = [];
+  if(start<end){
+    arr.push(start);
+    start++;
+    return arr.concat(range(start,end));
+  }
+  return arr;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
