@@ -11,7 +11,16 @@ sumToN(9)  // returns 45
 sumToN(-8)  // returns null
 ***********************************************************************/
 
-// your code here
+let sumToN = n => {
+  if(n<0) return null;
+  let sum = 0;
+  if(n>0){
+    sum+=n;
+    n--;
+    return sum+sumToN(n);
+  }
+  return sum;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
